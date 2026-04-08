@@ -1,0 +1,25 @@
+﻿name: "olist_lakehouse"
+version: "1.0.0"
+config-version: 2
+
+profile: "olist_lakehouse"
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  olist_lakehouse:
+    +materialized: table
+    staging:
+      +schema: silver
+    marts:
+      +schema: gold

@@ -1,0 +1,15 @@
+﻿version: 2
+
+models:
+  - name: stg_orders_enriched
+    description: "Tabela enriquecida em nivel de item e pedido"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: total_order_value
+        tests:
+          - not_null

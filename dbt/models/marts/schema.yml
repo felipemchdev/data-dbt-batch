@@ -1,0 +1,35 @@
+﻿version: 2
+
+models:
+  - name: mart_revenue_daily
+    columns:
+      - name: order_date
+        tests:
+          - not_null
+      - name: revenue
+        tests:
+          - not_null
+
+  - name: mart_top_products
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: mart_customer_metrics
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+
+  - name: mart_seller_performance
+    columns:
+      - name: seller_id
+        tests:
+          - not_null
+
+  - name: mart_delivery_performance
+    columns:
+      - name: customer_state
+        tests:
+          - not_null
